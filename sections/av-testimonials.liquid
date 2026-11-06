@@ -1,0 +1,140 @@
+{{ 'component-av-cro.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <section class="av-section page-width section-{{ section.id }}-padding" aria-labelledby="Heading-{{ section.id }}">
+    <header class="av-section__head">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="av-section__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 id="Heading-{{ section.id }}" class="av-section__heading {{ section.settings.heading_size }}">
+          {{- section.settings.heading -}}
+        </h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <p class="av-section__subheading">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </header>
+
+    {%- if section.blocks.size > 0 -%}
+      <ul class="av-testimonials" tabindex="0" aria-label="{{ section.settings.heading | escape }}">
+        {%- for block in section.blocks -%}
+          {%- assign has_proof = false -%}
+          {%- if block.settings.image != blank or block.settings.theme_image != 'none' -%}
+            {%- assign has_proof = true -%}
+          {%- endif -%}
+          <li class="av-testimonial" {{ block.shopify_attributes }}>
+            {%- if section.settings.show_stars -%}
+              <p class="av-testimonial__stars" aria-hidden="true">★★★★★</p>
+            {%- endif -%}
+            {%- if block.settings.quote != blank -%}
+              <blockquote class="av-testimonial__quote">{{ block.settings.quote }}</blockquote>
+            {%- endif -%}
+            {%- if has_proof -%}
+              <figure class="av-testimonial__proof">
+                <div class="av-testimonial__proof-frame">
+                  {% render 'av-image',
+                    image: block.settings.image,
+                    asset: block.settings.theme_image,
+                    alt: 'Captura de WhatsApp de ' | append: block.settings.name,
+                    sizes: '(min-width: 750px) 300px, 80vw'
+                  %}
+                </div>
+                <figcaption class="av-testimonial__proof-caption">Mensaje real por WhatsApp</figcaption>
+              </figure>
+            {%- endif -%}
+            <p class="av-testimonial__author">
+              <span class="av-testimonial__name">{{ block.settings.name }}</span>
+              {%- if block.settings.meta != blank -%}
+                <span class="av-testimonial__meta">{{ block.settings.meta }}</span>
+              {%- endif -%}
+            </p>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if section.settings.note != blank -%}
+      <p class="av-section__note">{{ section.settings.note }}</p>
+    {%- endif -%}
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "AV · Testimonios",
+  "tag": "div",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Texto superior", "default": "Testimonios" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Lo que cuentan quienes ya lo incorporaron" },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "options": [
+        { "value": "h2", "label": "Mediano" },
+        { "value": "h1", "label": "Grande" },
+        { "value": "h0", "label": "Extra grande" }
+      ],
+      "default": "h2"
+    },
+    { "type": "textarea", "id": "subheading", "label": "Subtítulo" },
+    { "type": "checkbox", "id": "show_stars", "label": "Mostrar estrellas", "default": false, "info": "Activalo solo si el cliente puntuó con estrellas." },
+    {
+      "type": "textarea",
+      "id": "note",
+      "label": "Nota al pie",
+      "default": "Experiencias individuales. Los resultados pueden variar de una persona a otra. Los suplementos dietarios no reemplazan una dieta variada ni la consulta con un profesional de la salud."
+    },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-1" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Espacio superior", "default": 44 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Espacio inferior", "default": 44 }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonio",
+      "settings": [
+        { "type": "richtext", "id": "quote", "label": "Texto del testimonio" },
+        { "type": "text", "id": "name", "label": "Nombre", "default": "Nombre" },
+        { "type": "text", "id": "meta", "label": "Detalle", "default": "Cliente de Alquimia Vita" },
+        { "type": "image_picker", "id": "image", "label": "Captura de WhatsApp", "info": "Si subís una imagen, reemplaza a la incluida en el tema." },
+        {
+          "type": "select",
+          "id": "theme_image",
+          "label": "Captura incluida en el tema",
+          "options": [
+            { "value": "none", "label": "Ninguna" },
+            { "value": "whatsapp-1", "label": "WhatsApp 1 (creatina y colágeno)" },
+            { "value": "whatsapp-2", "label": "WhatsApp 2 (docente)" },
+            { "value": "whatsapp-3", "label": "WhatsApp 3 (14 días)" }
+          ],
+          "default": "none"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 9,
+  "presets": [
+    {
+      "name": "AV · Testimonios",
+      "blocks": [{ "type": "testimonial" }, { "type": "testimonial" }, { "type": "testimonial" }]
+    }
+  ]
+}
+{% endschema %}

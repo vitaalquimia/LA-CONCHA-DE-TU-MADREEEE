@@ -1,0 +1,489 @@
+{
+  "sections": {
+    "slideshow_HUAjUY": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_zG7GUK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/hero-alquimia-vita.png",
+            "image_overlay_opacity": 40,
+            "heading": "Conocé cómo funcionan los adaptógenos",
+            "heading_size": "h1",
+            "subheading": "Descubrí qué hace únicos a nuestros extractos: hongos funcionales, compuestos naturales y un proceso de extracción pensado para aprovechar cada ingrediente.",
+            "button_label": "¿Por qué elegirnos?",
+            "link": "#shopify-section-template--29770150346912__multicolumn_DM7yDi",
+            "button_style_secondary": true,
+            "show_text_box": false,
+            "box_align": "top-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-4"
+          }
+        },
+        "slide_PWt3dd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/slide-nuestra-historia-la-gota.png",
+            "image_overlay_opacity": 10,
+            "heading": "La alquimia detrás de cada fórmula",
+            "heading_size": "h1",
+            "subheading": "Conocé la historia, los valores y la ciencia que dan vida a Alquimia Vita.&nbsp;",
+            "button_label": "Nuestra Historia",
+            "link": "shopify://pages/conoce-a-alquimia-vita",
+            "button_style_secondary": true,
+            "show_text_box": false,
+            "box_align": "top-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-4"
+          }
+        },
+        "slide_URDF6t": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/slide-2-fondo-laboratorio-solo.png",
+            "image_overlay_opacity": 40,
+            "heading": "La naturaleza tiene el poder de adaptarse",
+            "heading_size": "h1",
+            "subheading": "Descubrí la ciencia detrás de los adaptógenos y cómo pueden transformar tu rutina de bienestar.",
+            "button_label": "Conocé los Adaptógenos",
+            "link": "shopify://pages/conoce-mas-de-los-adaptogenos",
+            "button_style_secondary": true,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-4"
+          }
+        }
+      },
+      "block_order": [
+        "slide_zG7GUK",
+        "slide_PWt3dd",
+        "slide_URDF6t"
+      ],
+      "name": "Sliders",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Presentación de diapositivas sobre tu marca"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Nuestras Formulas",
+        "heading_size": "h2",
+        "description": "<p>Pensado para aquellos que desean un estilo de vida saludable</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_MC3RJH": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_B4pccM": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/adaptogenos.webp",
+            "image_overlay_opacity": 0,
+            "heading": "La naturaleza tiene el poder de adaptarse",
+            "heading_size": "h2",
+            "subheading": "Los adaptógenos son compuestos naturales que ayudan tu cuerpo a responder mejor al estrés. La ciencia respalda cada fórmula de Alquimia Vita.",
+            "button_label": "Descubrí los adaptógenos",
+            "link": "shopify://pages/conoce-mas-de-los-adaptogenos",
+            "button_style_secondary": true,
+            "show_text_box": false,
+            "box_align": "top-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-4"
+          }
+        }
+      },
+      "block_order": [
+        "slide_B4pccM"
+      ],
+      "name": "Seccion alquimia",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "small",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": false,
+        "accessibility_info": "Presentación de diapositivas sobre tu marca"
+      }
+    },
+    "multicolumn_DM7yDi": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_qrdgUd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/bienestar.webp",
+            "title": "Bienestar diario",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_7EydHz": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/deportista.webp",
+            "title": "Deportistas",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GDxK74": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/outdoor.webp",
+            "title": "Estilos de Vida activos",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_y4xRnd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/profesional.webp",
+            "title": "Profesionales",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_qrdgUd",
+        "column_7EydHz",
+        "column_GDxK74",
+        "column_y4xRnd"
+      ],
+      "name": "Para quienes",
+      "settings": {
+        "title": "¿Para quienes?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 32,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_8kGkEQ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LHdCcY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/beta-glucan-scientific.png",
+            "title": "Beta-glucanos",
+            "text": "<p>Polisacáridos bioactivos — Modulan la respuesta inmune de forma inteligente: el cuerpo responde según lo que realmente necesita, no de forma genérica.</p>",
+            "link_label": "Inmunidad",
+            "link": ""
+          }
+        },
+        "column_eJ4QTf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cerebro-minimalista-desde-arriba-factor-ngf.png",
+            "title": "Factor NGF",
+            "text": "<p>Nerve Growth Factor — La Melena de León estimula la producción de NGF, asociado a la neuroplasticidad y la salud cognitiva sostenida.</p>",
+            "link_label": "Cognición",
+            "link": ""
+          }
+        },
+        "column_aDUyCK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/matraz-fondo-igual-al-cerebro.png",
+            "title": "Extracción ultrasónica",
+            "text": "<p>Cavitación acústica — Ondas de ultrasonido rompen la pared celular del hongo sin usar calor, liberando más principio activo por porción. Mejor biodisponibilidad de activos, sin degradar lo que se extrae.</p>",
+            "link_label": "Biodisponibilidad",
+            "link": ""
+          }
+        },
+        "column_TbEhwc": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/lions-mane-minimalista.png",
+            "title": "Recuperacion Nocturna",
+            "text": "<p>Reishi · Ashwagandha — Reducen el cortisol acumulado, favorecen el sueño de ondas lentas y aceleran la recuperación del sistema nervioso.</p>",
+            "link_label": "Recuperación",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_LHdCcY",
+        "column_eJ4QTf",
+        "column_aDUyCK",
+        "column_TbEhwc"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "¿Por que elegirnos?",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "circle",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "rich_text_4nhhrH": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7nmpnx": {
+          "type": "heading",
+          "settings": {
+            "heading": "La alquimia real no promete magia. Formula resultados.",
+            "heading_size": "h2"
+          }
+        },
+        "text_nqFbae": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>El mercado local de suplementos está lleno de promesas. Faltaba rigor.</em></p><p>Alquimia Vita nace de esa carencia. Somos un equipo formado en micología funcional y ciencia del rendimiento, y creamos esta marca para profesionales y atletas que ya probaron de todo — café, melatonina, energizantes — y siguen buscando algo que realmente sostenga su exigencia diaria.</p><p>No creemos en fórmulas genéricas. Creemos en protocolos específicos, con trazabilidad completa y evidencia detrás de cada ingrediente. Si no lo tomaríamos nosotros mismos antes de una jornada de catorce horas, no sale del laboratorio.</p>"
+          }
+        },
+        "button_dfPx3P": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7nmpnx",
+        "text_nqFbae",
+        "button_dfPx3P"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 60
+      }
+    },
+    "collapsible_content_ybTy9Q": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_GVqNAA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "01 — Formulación basada en evidencia",
+            "icon": "none",
+            "row_content": "<p>Cada dosis está calculada según literatura científica revisada — no según lo que \"se dice\" en redes sociales.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_XjMQVg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "02 — Registro RNPA y RNE",
+            "icon": "none",
+            "row_content": "<p>Cumplimiento completo con ASSAl. Los productos y el establecimiento elaborador cumplen con todos los requisitos establecidos en el Código Alimentario Argentino.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NwUpdq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "03 — Transparencia sin letra chica",
+            "icon": "none",
+            "row_content": "<p>Sabés exactamente qué tomás y por qué. Sin blends propietarios que esconden dosis insuficientes.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_L3Lmg7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "04 — Trazabilidad completa y asesoría real",
+            "icon": "none",
+            "row_content": "<p>Productos desarrollados y comercializados por profesionales de la salud.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_GVqNAA",
+        "collapsible_row_XjMQVg",
+        "collapsible_row_NwUpdq",
+        "collapsible_row_L3Lmg7"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "NUESTROS PRINCIPIOS",
+        "heading": "Lo que sostiene cada fórmula",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "row",
+        "container_color_scheme": "",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": true,
+        "image_ratio": "small",
+        "desktop_layout": "image_first",
+        "padding_top": 40,
+        "padding_bottom": 60
+      }
+    },
+    "av_testimonials_home": {
+      "type": "av-testimonials",
+      "blocks": {
+        "t1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "<p>“Tomando Foco y Energía, al tercer día ya sentí que las actividades que realizaba cotidianamente las realizaba con mucha liviandad. Soy docente y suelo sentir a media mañana mucho deseo de que la hora pase más rápido; ahora noto que realizo mis actividades con la misma energía y ganas desde que entro hasta que me voy.”</p><p>“Descanso Reparador, como lo dice su nombre, realmente cumple con ese efecto.”</p>",
+            "name": "Clienta docente",
+            "meta": "Foco y Energía + Descanso Reparador",
+            "theme_image": "whatsapp-2"
+          }
+        },
+        "t2": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "<p>“Empecé bien esta semana, porque lo había cortado. Por ahora re bien, lo tomo junto a creatina y colágeno.”</p>",
+            "name": "Dani B.",
+            "meta": "Cliente de Alquimia Vita",
+            "theme_image": "whatsapp-1"
+          }
+        },
+        "t3": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "<p>“Hoy cumplo los primeros 14 días. La verdad que, como no tengo una rutina exacta, me cuesta ver los cambios, pero creo que bien.”</p>",
+            "name": "Genaro",
+            "meta": "Cliente · primeros 14 días",
+            "theme_image": "whatsapp-3"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "settings": {
+        "eyebrow": "Testimonios",
+        "heading": "Lo que cuentan quienes ya lo incorporaron",
+        "heading_size": "h2",
+        "subheading": "Mensajes reales que recibimos por WhatsApp al acompañar cada rutina.",
+        "show_stars": false,
+        "note": "Experiencias individuales. Los resultados pueden variar de una persona a otra. Los suplementos dietarios no reemplazan una dieta variada ni la consulta con un profesional de la salud.",
+        "color_scheme": "scheme-2",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    },
+    "av_customers_home": {
+      "type": "av-customers",
+      "blocks": {
+        "c1": {
+          "type": "customer",
+          "settings": {
+            "theme_image": "entrega-1",
+            "alt": "Clienta de Alquimia Vita con sus dos extractos en la entrega",
+            "caption": "Entrega en mano · Santa Fe"
+          }
+        },
+        "c2": {
+          "type": "customer",
+          "settings": {
+            "theme_image": "entrega-2",
+            "alt": "Cliente de Alquimia Vita con su bolsa «Gracias por confiar»",
+            "caption": "Gracias por confiar"
+          }
+        },
+        "c3": {
+          "type": "customer",
+          "settings": {
+            "theme_image": "entrega-3",
+            "alt": "Cliente de Alquimia Vita recibiendo su pedido",
+            "caption": "Gracias por tu compra"
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3"
+      ],
+      "settings": {
+        "eyebrow": "Comunidad Alquimia Vita",
+        "heading": "Clientes que ya recibieron su pedido",
+        "heading_size": "h2",
+        "subheading": "Compraron en la web y les llevamos su pedido. Cada entrega es una historia que nos alegra compartir.",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-2",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    }
+  },
+  "order": [
+    "slideshow_HUAjUY",
+    "featured_collection",
+    "slideshow_MC3RJH",
+    "multicolumn_DM7yDi",
+    "multicolumn_8kGkEQ",
+    "rich_text_4nhhrH",
+    "av_testimonials_home",
+    "av_customers_home",
+    "collapsible_content_ybTy9Q"
+  ]
+}

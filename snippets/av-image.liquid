@@ -1,0 +1,53 @@
+{%- liquid
+  assign file = ''
+  assign width = 900
+  assign height = 1200
+  case asset
+    when 'entrega-1'
+      assign file = 'av-cliente-entrega-1.jpg'
+      assign height = 1195
+    when 'entrega-2'
+      assign file = 'av-cliente-entrega-2.jpg'
+      assign height = 1196
+    when 'entrega-3'
+      assign file = 'av-cliente-entrega-3.jpg'
+      assign height = 1593
+    when 'whatsapp-1'
+      assign file = 'av-whatsapp-1.jpg'
+      assign width = 720
+      assign height = 1476
+    when 'whatsapp-2'
+      assign file = 'av-whatsapp-2.jpg'
+      assign width = 720
+      assign height = 1215
+    when 'whatsapp-3'
+      assign file = 'av-whatsapp-3.jpg'
+      assign width = 720
+      assign height = 1490
+  endcase
+  assign css_class = 'av-image'
+  if cover
+    assign css_class = 'av-image av-image--cover'
+  endif
+-%}
+{%- if image != blank -%}
+  {{
+    image
+    | image_url: width: 900
+    | image_tag:
+      class: css_class,
+      loading: 'lazy',
+      widths: '360, 540, 720, 900',
+      sizes: sizes,
+      alt: alt
+  }}
+{%- elsif file != blank -%}
+  <img
+    src="{{ file | asset_url }}"
+    class="{{ css_class }}"
+    width="{{ width }}"
+    height="{{ height }}"
+    loading="lazy"
+    alt="{{ alt | escape }}"
+  >
+{%- endif -%}

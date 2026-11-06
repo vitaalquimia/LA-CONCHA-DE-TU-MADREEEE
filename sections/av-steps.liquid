@@ -1,0 +1,145 @@
+{{ 'component-av-cro.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <section class="av-section page-width section-{{ section.id }}-padding">
+    <header class="av-section__head">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="av-section__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="av-section__heading {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subheading != blank -%}
+        <p class="av-section__subheading">{{ section.settings.subheading }}</p>
+      {%- endif -%}
+    </header>
+
+    {%- if section.blocks.size > 0 -%}
+      <ol class="av-steps">
+        {%- for block in section.blocks -%}
+          <li class="av-step" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              <div class="av-step__media">
+                {% render 'av-image',
+                  image: block.settings.image,
+                  alt: block.settings.title,
+                  sizes: '(min-width: 750px) 300px, 90vw',
+                  cover: true
+                %}
+              </div>
+            {%- elsif block.settings.icon != 'none' -%}
+              <span class="av-step__icon" aria-hidden="true">
+                {%- case block.settings.icon -%}
+                  {%- when 'drop' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.5 4.2 6 7.2 6 10.5a6 6 0 0 1-12 0C6 10.2 8.5 7.2 12 3z"/></svg>
+                  {%- when 'leaf' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4C9 4 4 9 4 15c0 2.5 1.5 5 4.5 5C15 20 20 15 20 4z"/><path d="M4 20c3-6 7-9 12-11"/></svg>
+                  {%- when 'glass' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12l-1.4 15a2 2 0 0 1-2 1.8H9.4a2 2 0 0 1-2-1.8L6 4z"/><path d="M6.6 10h10.8"/></svg>
+                  {%- when 'sun' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                  {%- when 'moon' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+                  {%- when 'check' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16 9.5"/></svg>
+                  {%- when 'heart' -%}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+                {%- endcase -%}
+              </span>
+            {%- endif -%}
+            {%- if section.settings.show_numbers -%}
+              <p class="av-step__number">Paso {{ forloop.index }}</p>
+            {%- endif -%}
+            {%- if block.settings.title != blank -%}
+              <h3 class="av-step__title h4">{{ block.settings.title }}</h3>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <p class="av-step__text">{{ block.settings.text }}</p>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ol>
+    {%- endif -%}
+
+    {%- if section.settings.note != blank -%}
+      <p class="av-section__note">{{ section.settings.note }}</p>
+    {%- endif -%}
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "AV · Pasos y proceso",
+  "tag": "div",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Texto superior", "default": "Cómo funciona" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Un ritual simple, pensado para sostenerse" },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Tamaño del título",
+      "options": [
+        { "value": "h2", "label": "Mediano" },
+        { "value": "h1", "label": "Grande" },
+        { "value": "h0", "label": "Extra grande" }
+      ],
+      "default": "h2"
+    },
+    { "type": "textarea", "id": "subheading", "label": "Subtítulo" },
+    { "type": "checkbox", "id": "show_numbers", "label": "Mostrar «Paso 1, 2, 3»", "default": false },
+    { "type": "textarea", "id": "note", "label": "Nota al pie", "info": "Ideal para advertencias legales." },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Esquema de color", "default": "scheme-2" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Espacio superior", "default": 44 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Espacio inferior", "default": 44 }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Paso",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Ícono",
+          "options": [
+            { "value": "none", "label": "Sin ícono" },
+            { "value": "drop", "label": "Gota" },
+            { "value": "leaf", "label": "Hoja" },
+            { "value": "glass", "label": "Vaso" },
+            { "value": "sun", "label": "Sol" },
+            { "value": "moon", "label": "Luna" },
+            { "value": "check", "label": "Tilde" },
+            { "value": "heart", "label": "Corazón" }
+          ],
+          "default": "drop"
+        },
+        { "type": "image_picker", "id": "image", "label": "Imagen", "info": "Si subís una imagen, reemplaza al ícono." },
+        { "type": "text", "id": "title", "label": "Título", "default": "Título del paso" },
+        { "type": "textarea", "id": "text", "label": "Texto" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "AV · Pasos y proceso",
+      "blocks": [{ "type": "step" }, { "type": "step" }, { "type": "step" }]
+    }
+  ]
+}
+{% endschema %}
